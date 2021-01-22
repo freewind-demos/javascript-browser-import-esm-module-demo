@@ -2,7 +2,16 @@
 <head>
 </head>
 <body>
-<div id="main"></div>
-<script src="./index.js"></script>
+<h1>See console output</h1>
+<script type="module" src="./hello1.js"></script>
+<script type="module" src="./hello2.js"></script>
+<script type="module">
+  async function run() {
+    const {hello} = await import('./hello3.js')
+    hello()
+  }
+
+  run();
+</script>
 </body>
 </html>
